@@ -1,0 +1,342 @@
+/* GENERAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fff7f9;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* HEADER BANNER */
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+              url('Z4.jpg') center/cover no-repeat;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+/* Modern elegant overlay heading styles */
+.overlay h1 {
+  font-size: 3.8rem;
+  letter-spacing: 3px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff66a1, #ffc2d1, #ffe5ec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 4s linear infinite;
+  text-shadow: 0 0 15px rgba(255, 150, 185, 0.6);
+  font-family: "Playfair Display", serif;
+}
+
+/* soft animated shimmer */
+@keyframes shimmerText {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+
+.overlay .logo {
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(90deg, #ff6f91, #ffb6c1, #ff8fab);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  font-size: 3.8rem;
+  text-shadow: 0 0 20px rgba(255, 182, 193, 0.6);
+  animation: floatText 3s ease-in-out infinite;
+  letter-spacing: 2px;
+}
+
+/* Tagline below the logo */
+.overlay p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-style: italic;
+  color: #ffe8ef;
+  margin-top: 15px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(255, 182, 193, 0.8);
+  animation: fadeInUp 2s ease-in-out;
+}
+
+/* Text Animations */
+@keyframes shineText {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+@keyframes floatText {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.overlay button {
+  background-color: #dbf309;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.overlay button:hover {
+  background-color: #f2d309;
+  transform: scale(1.05);
+}
+
+/* NAVIGATION */
+nav {
+  background-color: #ffe3eb;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff6f91;
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.2rem;
+  color: #dd1133;
+  margin-bottom: 30px;
+}
+
+/* SERVICES */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+  color: #ff6f91;
+}
+
+.card p {
+  padding: 0 15px 20px;
+  color: #555;
+}
+
+/* ABOUT */ .about p
+ { max-width: 700px; margin: 0 auto; font-size: 1.1rem; color: #555; }
+
+
+
+
+
+
+
+
+/* CONTACT */
+.contact-details {
+  background: #fff1f5;
+  padding: 30px;
+  border-radius: 15px;
+  display: inline-block;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details p {
+  margin: 12px 0;
+  font-size: 1rem;
+}
+
+.contact-details a {
+  color: #ff6f91;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  background: #ff6f91;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 40px;
+  font-size: 0.95rem;
+}
+/* Background video setup */
+/* Background Video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(60%);
+}
+
+/* Banner Overlay */
+.banner {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🌸 MAIN TITLE */
+.main-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #ff007f, #ff66c4, #ffa8d4, #ff66c4, #ff007f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  animation: glamFlow 5s linear infinite;
+  text-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
+  margin-bottom: 10px;
+}
+
+/* Glam gradient animation */
+@keyframes glamFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Tagline */
+.overlay p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  color: #ffe6f0;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 8px rgba(255, 182, 193, 0.6);
+}
+
+/* Button */
+.overlay button {
+  background: linear-gradient(90deg, #ff66a1, #ffb6c1);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.overlay button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #ff4f9a, #ff99c8);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+}
+
+/* Instagram Profile Boxes */
+.instagram-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.insta-dp {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff66a1;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insta-dp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.8);
+}
+
+/* Service Headings (More Makeup Focused) */
+.services-container h3 {
+  font-family: "Poppins", sans-serif;
+  color: #ff4f9a;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 10px;
+  text-shadow: 0 0 10px rgba(255, 182, 193, 0.4);
+}
+
